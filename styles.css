@@ -33,375 +33,779 @@
         height: 100%;
     }
 
-    .section1 {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        /* Full viewport height */
-        overflow-x: hidden;
+
+    @media screen and (max-width: 768px) {
+        .root {
+            width: 100%;
+            height: 100%;
+        }
+
+        .section1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 55vh;
+            overflow-x: hidden;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .comp-title {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            z-index: 2;
+            font-size: 16px;
+            /* Reduce font size for smaller screens */
+            font-weight: 700;
+            font-family: 'dazk1';
+            margin-top: 15%;
+            margin-left: 5%;
+            color: #fff;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            width: 20%;
+        }
+
+        .comp-name {
+            margin-top: 4%;
+            margin-left: 5%;
+        }
+
+        .service-name {
+            position: absolute;
+            color: #fff;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            width: 60%;
+            font-size: 32px;
+            /* Adjust font size */
+            font-family: 'dazk3';
+            font-weight: 700;
+            margin-left: 5%;
+            margin-top: 40%;
+        }
+
+        /* ✅ Fix Background Scaling */
+        .section2 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+            background-image: url('./public/background-sec2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            /* Ensure it expands */
+            padding-bottom: 20px;
+            /* Avoid content cutoff */
+        }
+
+        /* ✅ Allow `.about-dazk` to expand */
+        .about-dazk {
+            position: relative;
+            /* Change from absolute */
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            padding: 5%;
+        }
+
+        .dazk-gif {
+            width: 100%;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            margin-left: 3%;
+        }
+
+        .about-title {
+            font-weight: lighter;
+            font-size: 36px;
+            color: #fff;
+            line-height: 45px;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 14px;
+            font-weight: lighter;
+            margin-top: 20px;
+            color: #fff;
+            line-height: 22px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 32px;
+        }
+
+        .service-cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ✅ Make Cards More Responsive */
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            border-radius: 8px;
+            /* Better rounded corners */
+            border: 2px solid black;
+            width: 80%;
+            /* More flexible width */
+            max-width: 350px;
+            /* Prevents oversized cards */
+            height: auto;
+            /* Let height adjust naturally */
+            background-color: #fff;
+            padding-bottom: 20px;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: rgb(215, 60, 190);
+            font-size: 22px;
+        }
+
+        .service-desc {
+            width: 90%;
+            font-size: 14px;
+            color: black;
+            letter-spacing: 2px;
+            text-align: center;
+            line-height: 22px;
+        }
+
+        .section3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 50px 10%;
+            position: relative;
+        }
+
+        /* 🎥 Video Background */
+        .video-container2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transform: scaleY(-1);
+        }
+
+        .faq-container {
+            margin-top: 50px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*justify-content: center; */
+            color: #fff;
+            font-size: 42px;
+        }
+
+
+        .faq-cards {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 15px;
+            z-index: 3;
+            /* Bring it to front */
+        }
+
+        .faq-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 2px black;
+            border: 2px;
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+        }
+
+        .top-div {
+            display: flex;
+            width: 100%;
+            height: 40%;
+            background-color: #E151CF;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
+
+        .faq-text {
+            font-size: 21px;
+            font-style: normal;
+            font-weight: normal;
+            color: black;
+            letter-spacing: 2px;
+            line-height: 25px;
+        }
+
+        .bottom-div {
+            display: flex;
+            width: 100%;
+            height: 60%;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
+
+        .section4 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            min-height: 100vh;
+            padding: 40px 5%;
+            overflow: hidden;
+        }
+
+
+        .background-dazk1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* Ensures background stays behind */
+        }
+
+        .review-left-section {
+            width: 100%;
+            align-items: center;
+            margin-top: 50px;
+            z-index: 2;
+        }
+
+        .review-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff
+        }
+
+        .review-gif {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            margin: 40px 0;
+        }
+
+        .review-right-section {
+            width: 100%;
+            margin-top: 20px;
+            z-index: 2;
+        }
+
+        .blocks {
+            margin: 0;
+            width: 100%;
+        }
+
+        .block {
+            margin-top: 10%;
+            border: 1px solid white !important;
+            /* Ensure border is visible */
+            padding: 20px;
+            border-radius: 8px;
+            /* Optional: Adds rounded corners */
+        }
+
+        .review-text {
+            color: #ffffff !important;
+            /* Ensure text is white */
+            font-size: 18.6px;
+        }
+
+        .review-author {
+            margin-top: 10px;
+            font-size: 18.6px;
+            color: rgb(215, 60, 190);
+        }
+
+        .section5 {
+            position: relative;
+            height: auto;
+            padding: 50px 5%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .quote-section {
+            position: relative;
+            z-index: 2;
+            /* Ensures it's above the video */
+            padding: 20px;
+            width: 90%;
+            background: rgba(0, 0, 0, 0.6);
+            /* Optional: Adds better contrast */
+            border-radius: 10px;
+        }
+
+        .quote-text {
+            width: 100%;
+            font-size: 24px;
+            line-height: 32px;
+            color: white;
+            /* Ensure visibility */
+        }
+
+        .phone,
+        .email {
+            font-size: 20px;
+            color: white;
+        }
+
+        .phone-text,
+        .email-text {
+            font-size: 18px;
+            word-break: break-word;
+            color: rgb(215, 60, 190);
+        }
+
     }
 
-    .video-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensures the video covers the entire section */
-        z-index: 1;
-        /* Place the video behind the content */
-    }
 
-    .comp-title {
-        display: flex;
-    }
+    @media screen and (min-width: 769px) {
+        .section1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            overflow-x: hidden;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the video covers the entire section */
+            z-index: 1;
+            /* Place the video behind the content */
+        }
+
+        .comp-title {
+            display: flex;
+        }
 
 
-    .comp-name,
-    .service-name,
-    .comp-title {
-        position: relative;
-        z-index: 2;
-        /* Bring the text to the foreground */
-        color: #fff;
-        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
-    }
+        .comp-name,
+        .service-name,
+        .comp-title {
+            position: relative;
+            z-index: 2;
+            /* Bring the text to the foreground */
+            color: #fff;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+        }
 
-    .logo {
-        width: 120px;
-    }
+        .logo {
+            width: 120px;
+        }
 
-    .comp-title {
-        width: 400px;
-        height: 87px;
-        align-items: center;
-        font-style: normal;
-        font-size: 18px;
-        font-weight: 700;
-        font-family: 'dazk1';
-        top: 15%;
-        left: 19%;
+        .comp-title {
+            width: 400px;
+            height: 87px;
+            align-items: center;
+            font-style: normal;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'dazk1';
+            top: 15%;
+            left: 19%;
 
-    }
+        }
 
-    .service-name {
-        width: 30%;
-        font-size: 74px;
-        font-style: normal;
-        font-family: 'dazk3';
-        font-weight: 700;
-        top: 40%;
-        left: 20%;
-    }
+        .service-name {
+            width: 30%;
+            font-size: 74px;
+            font-style: normal;
+            font-family: 'dazk3';
+            font-weight: 700;
+            top: 40%;
+            left: 20%;
+        }
 
-    .section2 {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        overflow-x: hidden;
-    }
+        .section2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+            background-image: url('./public/background-sec2.jpg');
+            /* Replace with your image path */
+            background-size: cover;
+            /* Ensures the image covers the div */
+            background-position: center;
+            /* Centers the background image */
+            background-repeat: no-repeat;
+            /* Prevents image repetition */
+        }
 
-    .background-dazk {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
+        /* .background-dazk {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        } */
 
-    .about-dazk {
-        display: flex;
-        z-index: 2;
-        position: relative;
-        top: 10%;
-        left: 18%;
-    }
+        .about-dazk {
+            display: flex;
+            z-index: 2;
+            position: relative;
+            top: 10%;
+            left: 18%;
+        }
 
-    .dazk-gif {
-        width: 534px;
-        height: 614px;
-    }
+        .dazk-gif {
+            width: 534px;
+            height: 614px;
+        }
 
-    .about-title {
-        font-weight: lighter;
-        font-size: 48px;
-        position: relative;
-        color: #fff;
-        line-height: 55px;
-    }
+        .about-title {
+            font-weight: lighter;
+            font-size: 48px;
+            position: relative;
+            color: #fff;
+            line-height: 55px;
+        }
 
-    .about-content {
-        position: relative;
-        margin-left: 42px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10%;
-        width: 30%;
-    }
+        .about-content {
+            position: relative;
+            margin-left: 42px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10%;
+            width: 30%;
+        }
 
-    .about-text {
-        font-size: 18px;
-        font-style: normal;
-        font-weight: lighter;
-        margin-top: 20px;
-        color: #fff;
-        line-height: 28px;
-        letter-spacing: 3px;
-    }
+        .about-text {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: lighter;
+            margin-top: 20px;
+            color: #fff;
+            line-height: 28px;
+            letter-spacing: 3px;
+        }
 
-    .services {
-        margin-top: 100px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 42px;
-    }
+        .services {
+            margin-top: 100px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 42px;
+        }
 
-    .service-cards {
-        display: flex;
-        align-items: center;
-    }
+        .service-cards {
+            display: flex;
+            align-items: center;
+        }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px;
-        border-radius: 2px black;
-        border: 2px;
-        width: 318px;
-        height: 550px;
-        background-color: #fff;
-    }
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px;
+            border-radius: 2px black;
+            border: 2px;
+            width: 318px;
+            height: 550px;
+            background-color: #fff;
+        }
 
-    .card-image {
-        width: 100%;
-        height: 70%;
-    }
+        .card-image {
+            width: 100%;
+            height: 70%;
+        }
 
-    .service-title {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        align-items: center;
-        color: rgb(215, 60, 190);
-        font-size: 24px;
-    }
+        .service-title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            color: rgb(215, 60, 190);
+            font-size: 24px;
+        }
 
-    .service-desc {
-        width: 280px;
-        font-style: normal;
-        font-size: medium;
-        color: black;
-        letter-spacing: 4px;
-        text-align: center;
-        line-height: 25px;
-    }
+        .service-desc {
+            width: 280px;
+            font-style: normal;
+            font-size: medium;
+            color: black;
+            letter-spacing: 4px;
+            text-align: center;
+            line-height: 25px;
+        }
 
-    .section3 {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        overflow-x: hidden;
-    }
+        .section3 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-x: hidden;
+        }
 
-    .video-container2 {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensures the video covers the entire section */
-        z-index: 1;
-        /* Place the video behind the content */
-        transform: scaleY(-1);
-    }
+        .video-container2 {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the video covers the entire section */
+            z-index: 1;
+            /* Place the video behind the content */
+            transform: scaleY(-1);
+        }
 
-    .faq-container {
-        margin-top: 50px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center; */
-        color: #fff;
-        font-size: 42px;
-    }
+        .faq-container {
+            margin-top: 50px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            color: #fff;
+            font-size: 42px;
+        }
 
-    .faq-cards {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        .faq-cards {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
-    .faq-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-radius: 2px black;
-        border: 2px;
-        width: 400px;
-        height: 500px;
-        background-color: #fff;
-    }
+        .faq-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 2px black;
+            border: 2px;
+            width: 400px;
+            height: 500px;
+            background-color: #fff;
+        }
 
-    .top-div {
-        display: flex;
-        width: 100%;
-        height: 40%;
-        background-color: #E151CF;
-        align-items: center;
-        justify-content: center;
-        padding: 28px;
-    }
+        .top-div {
+            display: flex;
+            width: 100%;
+            height: 40%;
+            background-color: #E151CF;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
 
-    .faq-text {
-        font-size: 21px;
-        font-style: normal;
-        font-weight: normal;
-        color: black;
-        letter-spacing: 2px;
-        line-height: 25px;
-    }
+        .faq-text {
+            font-size: 21px;
+            font-style: normal;
+            font-weight: normal;
+            color: black;
+            letter-spacing: 2px;
+            line-height: 25px;
+        }
 
-    .bottom-div {
-        display: flex;
-        width: 100%;
-        height: 60%;
-        background-color: #fff;
-        align-items: center;
-        justify-content: center;
-        padding: 28px;
-    }
+        .bottom-div {
+            display: flex;
+            width: 100%;
+            height: 60%;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+        }
 
-    .section4 {
-        position: relative;
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        overflow: hidden;
-    }
+        .section4 {
+            position: relative;
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+        }
 
-    .background-dazk1 {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
+        .background-dazk1 {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
 
-    .review-left-section {
-        position: relative;
-        display: flex;
-        width: 35%;
-        flex-direction: column;
-        /* justify-content:end; */
-        align-items: end;
-        z-index: 2;
-        margin-top: 80px;
-    }
+        .review-left-section {
+            position: relative;
+            display: flex;
+            width: 35%;
+            flex-direction: column;
+            /* justify-content:end; */
+            align-items: end;
+            z-index: 2;
+            margin-top: 80px;
+        }
 
-    .left-end {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-    }
+        .left-end {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
 
-    .review-title {
+        .review-title {
 
-        color: #fff;
-        font-size: 48px;
-    }
+            color: #fff;
+            font-size: 48px;
+        }
 
-    .review-gif {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        width: 390.568px;
-        height: 413.3px;
-    }
+        .review-gif {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 390.568px;
+            height: 413.3px;
+        }
 
-    .review-right-section {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        display: flex;
-        width: 65%;
-        z-index: 2;
-    }
+        .review-right-section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            width: 65%;
+            z-index: 2;
+        }
 
-    .blocks {
-        margin-left: 250px;
-        margin-top: 80px;
-    }
+        .blocks {
+            margin-left: 250px;
+            margin-top: 80px;
+        }
 
-    .block {
-        margin-bottom: 25px;
-        width: 621px;
-        /* height: 179px; */
-        border: 1px solid white;
-        letter-spacing: 3px;
-        line-height: 25px;
-        padding: 40px;
-    }
+        .block {
+            margin-bottom: 25px;
+            width: 621px;
+            /* height: 179px; */
+            border: 1px solid white;
+            letter-spacing: 3px;
+            line-height: 25px;
+            padding: 40px;
+        }
 
-    .review-text {
-        color: #fff;
-        font-size: 18.6px;
-    }
+        .review-text {
+            color: #fff;
+            font-size: 18.6px;
+        }
 
-    .review-author {
-        margin-top: 10px;
-        font-size: 18.6px;
-        color: rgb(215, 60, 190);
-    }
+        .review-author {
+            margin-top: 10px;
+            font-size: 18.6px;
+            color: rgb(215, 60, 190);
+        }
 
-    .section5 {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
+        .section5 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .quote-section {
-        margin-top: 7%;
-        margin-left: 10%;
-        z-index: 2;
+        .quote-section {
+            margin-top: 7%;
+            margin-left: 10%;
+            z-index: 2;
 
-    }
+        }
 
-    .quote-text {
-        width: 400px;
-        font-style: normal;
-        color: #fff;
-        font-size: 48px;
-        letter-spacing: 0.05em;
-        line-height: 55px;
-    }
+        .quote-text {
+            width: 400px;
+            font-style: normal;
+            color: #fff;
+            font-size: 48px;
+            letter-spacing: 0.05em;
+            line-height: 55px;
+        }
 
-    .phone,
-    .email {
-        font-family: 'dazk1';
-        margin-top: 5%;
-        color: #fff;
-        font-size: 24px;
-        letter-spacing: 0.05em;
-    }
+        .phone,
+        .email {
+            font-family: 'dazk1';
+            margin-top: 5%;
+            color: #fff;
+            font-size: 24px;
+            letter-spacing: 0.05em;
+        }
 
-    .phone-text,
-    .email-text {
-        font-size: 24px;
-        margin-top: 2%;
-        color: rgb(215, 60, 190);
+        .phone-text,
+        .email-text {
+            font-size: 24px;
+            margin-top: 2%;
+            color: rgb(215, 60, 190);
+        }
     }
