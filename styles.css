@@ -33,7 +33,7 @@
         height: 100%;
     }
 
-
+    /* Mobile */
     @media screen and (max-width: 768px) {
         .root {
             width: 100%;
@@ -260,7 +260,6 @@
             border-radius: 2px black;
             border: 2px;
             width: 350px;
-            height: 500px;
             background-color: #fff;
         }
 
@@ -288,7 +287,6 @@
             width: 100%;
             height: 60%;
             background-color: #fff;
-            align-items: center;
             justify-content: center;
             padding: 28px;
         }
@@ -423,10 +421,20 @@
             word-break: break-word;
             color: rgb(215, 60, 190);
         }
+        .whatsapp-icon{
+            width: 20px;
+        }
+
+        .whatsapp-anchor{
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
     }
 
-
+    /* Desktop */
     @media screen and (min-width: 769px) {
         .section1 {
             position: relative;
@@ -601,9 +609,9 @@
             font-style: normal;
             font-size: medium;
             color: black;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             text-align: center;
-            line-height: 25px;
+            line-height: 24px;
         }
 
         .section3 {
@@ -683,7 +691,6 @@
             width: 100%;
             height: 60%;
             background-color: #fff;
-            align-items: center;
             justify-content: center;
             padding: 28px;
         }
@@ -795,6 +802,7 @@
 
         .phone,
         .email {
+            flex-direction: column;
             font-family: 'dazk1';
             margin-top: 5%;
             color: #fff;
@@ -807,5 +815,15 @@
             font-size: 24px;
             margin-top: 2%;
             color: rgb(215, 60, 190);
+        }
+        .whatsapp-icon{
+            width: 40px;
+            padding-top: 1.5%;
+        }
+
+        .whatsapp-anchor{
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
         }
     }
